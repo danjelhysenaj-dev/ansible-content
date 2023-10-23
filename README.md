@@ -1,7 +1,4 @@
-# ansible-content
-
-
-# Folder Structure
+# ANSIBLE-CONTENT
 
 
 ![Alt text](images/image.png)
