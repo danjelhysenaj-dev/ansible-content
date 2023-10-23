@@ -18,6 +18,12 @@ including an example of how to use your role ( for instance, with variables pass
           roles:
             - mysql_db
 
+
+Created by danjelhysenaj-dev
+
+![Alt text](images/image.png)
+
+
 License
 -------
 
@@ -26,7 +32,3 @@ BSD
 
 Author Information
 ------------------
-
-Created by danjelhysenaj-dev
-
-![Alt text](images/image.png)
