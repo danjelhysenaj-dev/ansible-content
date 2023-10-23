@@ -1,0 +1,43 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+# < Pipeline Parameters -- taken as input >
+
+parameters:
+- name: env
+  displayName: Choose which environment you want to deploy
+  type: string 
+  default: TST
+  values:
+  - TST
+  - ACC
+  - PRD 
+
+- name: application 
+  displayName: Application to Deploy 
+  type: string 
+  default: MYSQL 
+  values:
+  - MYSQL 
+  - PYTHON
+
+variables:
+- name: az_subscription
+  ${{ if or(eq( parameters['env'], 'TST'), contains(parameters.env, 'ACC')) }}:
+    value: "KeyVault-SVC-NONPROD"
+  ${{ if eq( parameters['env'], 'PRD') }}:
+    value: "KeyVault-SVC-NONPROD"
+- name: az_keyvault
+  ${{ if or(eq( parameters['env'], 'TST') }}:
+    value: "KeyVault-TST"
+  ${{ if or(eq( parameters['env'], 'ACC') }}:
+    value: "KeyVault-ACC"
+  ${{ if or(eq( parameters['env'], 'PRD') }}:
+    value: "KeyVault-PRD"
+  
+
+
+  
