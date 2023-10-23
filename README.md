@@ -19,7 +19,6 @@ including an example of how to use your role ( for instance, with variables pass
             - mysql_db
 
 
-Created by danjelhysenaj-dev
 
 ![Alt text](images/image.png)
 
@@ -32,3 +31,5 @@ BSD
 
 Author Information
 ------------------
+
+Created by danjelhysenaj-dev
