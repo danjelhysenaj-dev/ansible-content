@@ -1,7 +1,7 @@
 # ansible-content
 
 
-#Folder Structure
+# Folder Structure
 
 
 ![Alt text](images/image.png)
